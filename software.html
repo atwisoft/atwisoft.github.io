@@ -1,0 +1,80 @@
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      text-align: center; /* Center everything */
+    }
+    .program {
+      display: inline-block; /* Aligns items next to each other */
+      margin: 20px; /* Spacing between items */
+    }
+    .program-icon {
+      width: 80px; /* Bigger icon size */
+      height: 80px;
+    }
+    .download-button {
+      display: inline-block;
+      background-color: transparent; /* No background */
+      color: darkblue; /* Dark blue for buttons */
+      padding: 5px 15px; /* Shorter button */
+      text-decoration: underline; /* Hyperlink style */
+      margin: 10px 0;
+    }
+    .download-button:hover {
+      color: blue; /* Darker blue on hover */
+    }
+    .platform-select {
+      margin-top: 20px;
+    }
+  </style>
+</head>
+<body>
+  <h1>Software</h1>
+  <div class="program">
+    <img src="ultraiso-icon.png" alt="UltraISO Icon" class="program-icon">
+    <div>
+      <a id="ultraiso-link" href="https://zsoft.github.io/ultraiso" class="download-button">Download UltraISO</a>
+      <p>UltraISO is a powerful CD/DVD image file creating/editing/converting tool.</p>
+    </div>
+  </div>
+  <div class="program">
+    <img src="xpize-icon.png" alt="Xpize Icon" class="program-icon">
+    <div>
+      <a id="xpize-link" href="https://zsoft.github.io/xpize" class="download-button">Download xpize</a>
+      <p>xpize enhances the look of your Windows XP interface with various themes.</p>
+    </div>
+  </div>
+  
+  <div class="platform-select">
+    <label for="platforms">Select platform:</label>
+    <select id="platforms" onchange="updateDownloadLinks()">
+      <option value="windows">Windows</option>
+      <option value="linux">Linux</option>
+      <option value="mac">Mac OS</option>
+      <!-- Add more platforms as needed -->
+    </select>
+  </div>
+
+  <script>
+    function updateDownloadLinks() {
+      const platform = document.getElementById('platforms').value;
+
+      const ultraisoLinks = {
+        windows: 'https://zsoft.github.io/ultraiso/windows',
+        linux: 'https://zsoft.github.io/ultraiso/linux',
+        mac: 'https://zsoft.github.io/ultraiso/mac',
+      };
+
+      const xpizeLinks = {
+        windows: 'https://zsoft.github.io/xpize/windows',
+        linux: 'https://zsoft.github.io/xpize/linux',
+        mac: 'https://zsoft.github.io/xpize/mac',
+      };
+
+      document.getElementById('ultraiso-link').href = ultraisoLinks[platform];
+      document.getElementById('xpize-link').href = xpizeLinks[platform];
+    }
+  </script>
+</body>
+</html>
