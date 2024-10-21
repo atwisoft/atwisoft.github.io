@@ -3,26 +3,26 @@
   <style>
     body {
       font-family: 'Ubuntu', sans-serif;
-      text-align: center; /* Center everything */
+      text-align: center;
     }
     .program {
-      display: inline-block; /* Aligns items next to each other */
-      margin: 20px; /* Spacing between items */
+      display: inline-block;
+      margin: 20px;
     }
     .program-icon {
-      width: 80px; /* Bigger icon size */
+      width: 80px;
       height: 80px;
     }
     .download-button {
       display: inline-block;
-      background-color: transparent; /* No background */
-      color: black; /* Dark blue for buttons */
-      padding: 5px 15px; /* Shorter button */
-      text-decoration: underline; /* Hyperlink style */
+      background-color: transparent;
+      color: darkblue;
+      padding: 5px 15px;
+      text-decoration: underline;
       margin: 10px 0;
     }
     .download-button:hover {
-      color: blue; /* Darker blue on hover */
+      color: blue;
     }
     .platform-select {
       margin-top: 20px;
@@ -34,14 +34,14 @@
   <div class="program">
     <img src="ultraiso-icon.png" alt="UltraISO Icon" class="program-icon">
     <div>
-      <a id="ultraiso-link" href="https://atwisoft.github.io/ultraiso" class="download-button">Download UltraISO</a>
+      <a id="ultraiso-link" href="https://atwisoft.github.io/ultraiso" class="download-button">Download UltraISO</a> <!-- Updated link -->
       <p>UltraISO is a powerful CD/DVD image file creating/editing/converting tool.</p>
     </div>
   </div>
   <div class="program">
     <img src="xpize-icon.png" alt="Xpize Icon" class="program-icon">
     <div>
-      <a id="xpize-link" href="https://atwisoft.github.io/xpize" class="download-button">Download xpize</a>
+      <a id="xpize-link" href="https://atwisoft.github.io/xpize" class="download-button">Download xpize</a> <!-- Updated link -->
       <p>xpize enhances the look of your Windows XP interface with various themes.</p>
     </div>
   </div>
@@ -52,7 +52,6 @@
       <option value="windows">Windows</option>
       <option value="linux">Linux</option>
       <option value="mac">Mac OS</option>
-      <!-- Add more platforms as needed -->
     </select>
   </div>
 
@@ -61,15 +60,15 @@
       const platform = document.getElementById('platforms').value;
 
       const ultraisoLinks = {
-        windows: 'https://atwisoft.github.io/ultraiso/windows',
-        linux: 'https://atwisoft.github.io/ultraiso/linux',
-        mac: 'https://atwisoft.github.io/ultraiso/mac',
+        windows: 'https://atwisoft.github.io/ultraiso/windows', // Updated URL
+        linux: 'https://atwisoft.github.io/ultraiso/linux', // Updated URL
+        mac: 'https://atwisoft.github.io/ultraiso/mac', // Updated URL
       };
 
       const xpizeLinks = {
-        windows: 'https://atwisoft.github.io/xpize/windows',
-        linux: 'https://atwisoft.github.io/xpize/linux',
-        mac: 'https://atwisoft.github.io/xpize/mac',
+        windows: 'https://atwisoft.github.io/xpize/windows', // Updated URL
+        linux: 'https://atwisoft.github.io/xpize/linux', // Updated URL
+        mac: 'https://atwisoft.github.io/xpize/mac', // Updated URL
       };
 
       document.getElementById('ultraiso-link').href = ultraisoLinks[platform];
