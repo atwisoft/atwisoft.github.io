@@ -16,7 +16,7 @@
     .download-button {
       display: inline-block;
       background-color: transparent; /* No background */
-      color: darkblue; /* Dark blue for buttons */
+      color: black; /* Dark blue for buttons */
       padding: 5px 15px; /* Shorter button */
       text-decoration: underline; /* Hyperlink style */
       margin: 10px 0;
@@ -34,14 +34,14 @@
   <div class="program">
     <img src="ultraiso-icon.png" alt="UltraISO Icon" class="program-icon">
     <div>
-      <a id="ultraiso-link" href="https://zsoft.github.io/ultraiso" class="download-button">Download UltraISO</a>
+      <a id="ultraiso-link" href="https://atwisoft.github.io/ultraiso" class="download-button">Download UltraISO</a>
       <p>UltraISO is a powerful CD/DVD image file creating/editing/converting tool.</p>
     </div>
   </div>
   <div class="program">
     <img src="xpize-icon.png" alt="Xpize Icon" class="program-icon">
     <div>
-      <a id="xpize-link" href="https://zsoft.github.io/xpize" class="download-button">Download xpize</a>
+      <a id="xpize-link" href="https://atwisoft.github.io/xpize" class="download-button">Download xpize</a>
       <p>xpize enhances the look of your Windows XP interface with various themes.</p>
     </div>
   </div>
@@ -61,15 +61,15 @@
       const platform = document.getElementById('platforms').value;
 
       const ultraisoLinks = {
-        windows: 'https://zsoft.github.io/ultraiso/windows',
-        linux: 'https://zsoft.github.io/ultraiso/linux',
-        mac: 'https://zsoft.github.io/ultraiso/mac',
+        windows: 'https://atwisoft.github.io/ultraiso/windows',
+        linux: 'https://atwisoft.github.io/ultraiso/linux',
+        mac: 'https://atwisoft.github.io/ultraiso/mac',
       };
 
       const xpizeLinks = {
-        windows: 'https://zsoft.github.io/xpize/windows',
-        linux: 'https://zsoft.github.io/xpize/linux',
-        mac: 'https://zsoft.github.io/xpize/mac',
+        windows: 'https://atwisoft.github.io/xpize/windows',
+        linux: 'https://atwisoft.github.io/xpize/linux',
+        mac: 'https://atwisoft.github.io/xpize/mac',
       };
 
       document.getElementById('ultraiso-link').href = ultraisoLinks[platform];
