@@ -1,0 +1,144 @@
+<html>
+<head>
+  <style>
+    body {
+      font-family: 'Ubuntu', sans-serif;
+      font-weight: 300; /* Ubuntu Light */
+      background-image: url('bg.png'); /* Background image */
+      background-size: cover;
+      background-position: center;
+      margin: 0;
+      padding: 0;
+      color: white;
+    }
+    .header-links {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+    }
+    .header-links a {
+      color: white;
+      text-decoration: none;
+      margin-left: 15px;
+      font-size: 18px;
+      transition: color 0.3s ease;
+    }
+    .header-links a:hover {
+      color: #ddd; /* Light gray on hover */
+    }
+    img {
+      display: block;
+      margin: 20px auto;
+      width: 200px;
+    }
+    h1, h2, p {
+      text-align: center;
+    }
+    .category {
+      margin: 40px 0;
+    }
+    .program {
+      display: inline-block;
+      margin: 20px;
+      text-align: center;
+    }
+    .program-icon {
+      width: 80px;
+      height: 80px;
+    }
+    .download-button {
+      display: inline-block;
+      background-color: transparent;
+      color: white; /* Changed to white */
+      padding: 5px 15px;
+      text-decoration: underline;
+      margin: 10px 0;
+      transition: color 0.3s ease;
+    }
+    .download-button:hover {
+      color: #ddd; /* Light gray on hover */
+    }
+  </style>
+</head>
+<body>
+  <!-- White hyperlinks at the top-right -->
+  <div class="header-links">
+    <a href="index.html">Home</a>
+    <a href="software.html">Software</a>
+  </div>
+
+  <img src="atwisoft.png" alt="AtwiSoft Logo"> <!-- PNG logo -->
+  <h1>Software</h1>
+
+  <!-- Software Section -->
+  <div class="category">
+    <h2>Software Tools</h2>
+
+    <div class="program">
+      <img src="ultraiso-icon.png" alt="UltraISO Icon" class="program-icon">
+      <div>
+        <a id="ultraiso-link" href="https://atwisoft.github.io/ultraiso" class="download-button">Download UltraISO</a>
+        <p>UltraISO is a powerful CD/DVD image file creating/editing/converting tool.</p>
+      </div>
+    </div>
+
+    <div class="program">
+      <img src="xpize-icon.png" alt="Xpize Icon" class="program-icon">
+      <div>
+        <a id="xpize-link" href="https://atwisoft.github.io/xpize" class="download-button">Download xpize</a>
+        <p>xpize enhances the look of your Windows XP interface with various themes.</p>
+      </div>
+    </div>
+
+    <!-- FlyAKiteXP under Software -->
+    <div class="program">
+      <img src="flyakitexp-icon.jpg" alt="FlyAKiteXP Icon" class="program-icon">
+      <div>
+        <a id="flyakitexp-link" href="https://atwisoft.github.io/flyakitexp" class="download-button">Download FlyAKiteXP</a>
+        <p>FlyAKiteXP transforms the look of your Windows XP to resemble macOS.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Platform selection for Realtek RTL8188FTV Driver -->
+  <div class="category">
+    <h2>OEM Software and Drivers</h2>
+
+    <div class="program">
+      <img src="realtek-icon.jpg" alt="Realtek Icon" class="program-icon">
+      <div>
+        <a id="realtek-link" href="https://atwisoft.github.io/realtek" class="download-button">Download Realtek RTL8188FTV Driver</a>
+        <p>Download the Realtek RTL8188FTV Driver for your network adapter.</p>
+        <label for="platforms">Select platform:</label>
+        <select id="platforms" onchange="updateDownloadLinks()">
+          <option value="windows">Windows</option>
+          <option value="linux">Linux</option>
+          <option value="mac">Mac OS</option>
+        </select>
+      </div>
+    </div>
+
+    <div class="program">
+      <img src="kodak-icon.jpg" alt="Kodak Icon" class="program-icon">
+      <div>
+        <a id="kodak-link" href="https://atwisoft.github.io/kodak" class="download-button">Download Kodak EasyShare C913 Software</a>
+        <p>Kodak EasyShare C913 software for managing your digital photos.</p>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    function updateDownloadLinks() {
+      const platform = document.getElementById('platforms').value;
+
+      const realtekLinks = {
+        windows: 'https://atwisoft.github.io/realtek/windows',
+        linux: 'https://atwisoft.github.io/realtek/linux',
+        mac: 'https://atwisoft.github.io/realtek/mac',
+      };
+
+      document.getElementById('realtek-link').href = realtekLinks[platform];
+    }
+  </script>
+</body>
+</html>
